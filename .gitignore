@@ -1,0 +1,13 @@
+# VS Code
+.vscode/
+
+# Windows files
+Thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
