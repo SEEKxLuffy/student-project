@@ -1,0 +1,596 @@
+```css
+/* ==============================
+   GENERAL
+============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 90px 20px 100px;
+
+    background:
+        radial-gradient(circle at top, #1e3a8a 0%, transparent 45%),
+        linear-gradient(135deg, #0f172a, #111827 60%, #0b1120);
+
+    color: white;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+
+    background: rgba(99, 102, 241, 0.12);
+    border-radius: 50%;
+
+    top: -180px;
+    left: -100px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    background: rgba(139, 92, 246, 0.10);
+    border-radius: 50%;
+
+    bottom: -170px;
+    right: -80px;
+}
+
+header h1 {
+    position: relative;
+    z-index: 2;
+
+    font-size: 52px;
+    margin-bottom: 12px;
+
+    letter-spacing: -1px;
+}
+
+header p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+    margin: auto;
+
+    color: #cbd5e1;
+    font-size: 17px;
+}
+
+.badge {
+    position: relative;
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 9px 18px;
+
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+
+    color: white;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.25);
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 17px 20px;
+
+    background: rgba(15, 23, 42, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+
+/* ==============================
+   MAIN
+============================== */
+
+main {
+    max-width: 1150px;
+
+    margin: 55px auto;
+
+    padding: 0 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+
+/* ==============================
+   SECTIONS / CARDS
+============================== */
+
+section {
+    background: rgba(17, 24, 39, 0.85);
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(139, 92, 246, 0.35);
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+section h2 {
+    margin-bottom: 15px;
+
+    color: #f8fafc;
+
+    font-size: 26px;
+}
+
+section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+    height: 3px;
+
+    margin-top: 8px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #a855f7
+    );
+}
+
+section p {
+    color: #aeb8c7;
+}
+
+
+/* ==============================
+   ABOUT IMAGE
+============================== */
+
+section img {
+    display: block;
+
+    width: 220px;
+    height: 220px;
+
+    object-fit: cover;
+
+    margin: 30px auto 5px;
+
+    border-radius: 50%;
+
+    border: 5px solid #6366f1;
+
+    padding: 5px;
+
+    background: #111827;
+
+    box-shadow:
+        0 0 0 8px rgba(99, 102, 241, 0.08),
+        0 15px 40px rgba(0, 0, 0, 0.4);
+
+    transition: 0.4s ease;
+}
+
+section img:hover {
+    transform: scale(1.05);
+
+    border-color: #a855f7;
+
+    box-shadow:
+        0 0 0 10px rgba(168, 85, 247, 0.10),
+        0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==============================
+   LISTS
+============================== */
+
+ul,
+ol {
+    margin-top: 15px;
+
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 9px;
+
+    color: #cbd5e1;
+}
+
+
+/* ==============================
+   TABLE
+============================== */
+
+table {
+    width: 100%;
+
+    margin-top: 20px;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+th,
+td {
+    padding: 14px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    text-align: left;
+}
+
+th {
+    background: #1e293b;
+
+    color: #f8fafc;
+}
+
+td {
+    color: #cbd5e1;
+}
+
+
+/* ==============================
+   FORM
+============================== */
+
+form {
+    margin-top: 20px;
+}
+
+fieldset {
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 14px;
+
+    background: rgba(15, 23, 42, 0.5);
+}
+
+legend {
+    padding: 0 10px;
+
+    color: #a78bfa;
+
+    font-weight: bold;
+}
+
+label {
+    display: block;
+
+    margin-top: 14px;
+    margin-bottom: 6px;
+
+    color: #cbd5e1;
+
+    font-weight: 500;
+}
+
+
+/* ==============================
+   INPUTS
+============================== */
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea,
+select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #334155;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    background: #0f172a;
+
+    color: #f8fafc;
+
+    transition: 0.3s;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
+textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+
+/* ==============================
+   RADIO & CHECKBOX
+============================== */
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 7px;
+
+    accent-color: #6366f1;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+button {
+    margin-top: 18px;
+
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.25);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(99, 102, 241, 0.35);
+}
+
+
+/* ==============================
+   FORM MESSAGE
+============================== */
+
+#form-message {
+    margin-top: 15px;
+
+    font-weight: bold;
+
+    color: #a78bfa;
+}
+
+
+/* ==============================
+   SAVED INFORMATION
+============================== */
+
+#saved-info {
+    margin-top: 12px;
+
+    padding: 16px;
+
+    background: #0f172a;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    margin-top: 60px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #070b14;
+
+    color: #94a3b8;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 70px 20px 80px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav {
+        gap: 18px;
+
+        padding: 14px 10px;
+
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+
+        margin-top: 30px;
+
+        gap: 20px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    section img {
+        width: 180px;
+        height: 180px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+}
+
+
+/* ==============================
+   VERY SMALL SCREENS
+============================== */
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    section img {
+        width: 160px;
+        height: 160px;
+    }
+}
