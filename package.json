@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
- "scripts": {
-  "hello": "node -e \"console.log('Hello Manish')\""
-},
+  "scripts": {
+    "hello": "node -e \"console.log('Hello Manish')\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SEEKxLuffy/student-project.git"
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/SEEKxLuffy/student-project#readme",
   "devDependencies": {
-    "sass": "^1.103.1"
+    "sass": "^1.103.1",
+    "typescript": "^7.0.2"
   }
 }
