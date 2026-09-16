@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@600;700&display=swap');
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.brand-anime {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 1.8rem;
+    color: #f3d49b;
+}
+
+.brand-restaurant {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: #e63946;
+    margin-top: 4px;
+}
+.navbar-nav .nav-link {
+    color: #e8e2dc !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #e63946 !important;
+}
+.navbar .btn-danger {
+    background-color: #b52b35;
+    border-color: #b52b35;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-danger:hover {
+    background-color: #d13a45;
+    border-color: #d13a45;
+    transform: translateY(-2px);
+}
+.navbar .phone-link {
+    color: #e8e2dc !important;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .phone-link:hover {
+    color: #e63946 !important;
+}
+.hero {
+    min-height: 85vh;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+.navbar {
+    background-color: #171214;
+}
